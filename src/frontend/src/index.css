@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* Editor dark theme - always dark */
+    --background: 0.13 0.012 248;
+    --foreground: 0.92 0.012 248;
+    --card: 0.18 0.015 248;
+    --card-foreground: 0.92 0.012 248;
+    --popover: 0.21 0.018 248;
+    --popover-foreground: 0.92 0.012 248;
+    --primary: 0.56 0.2 258;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.21 0.018 248;
+    --secondary-foreground: 0.92 0.012 248;
+    --muted: 0.19 0.016 248;
+    --muted-foreground: 0.73 0.016 248;
+    --accent: 0.26 0.022 248;
+    --accent-foreground: 0.92 0.012 248;
+    --destructive: 0.63 0.22 22;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.26 0.022 248;
+    --input: 0.26 0.022 248;
+    --ring: 0.56 0.2 258;
+    --chart-1: 0.56 0.2 258;
+    --chart-2: 0.55 0.22 290;
+    --chart-3: 0.67 0.2 145;
+    --chart-4: 0.65 0.18 30;
+    --chart-5: 0.6 0.22 340;
+    --sidebar: 0.18 0.015 248;
+    --sidebar-foreground: 0.92 0.012 248;
+    --sidebar-primary: 0.56 0.2 258;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.26 0.022 248;
+    --sidebar-accent-foreground: 0.92 0.012 248;
+    --sidebar-border: 0.26 0.022 248;
+    --sidebar-ring: 0.56 0.2 258;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.16 0.012 248);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.022 248);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.38 0.022 248);
+  }
+}
